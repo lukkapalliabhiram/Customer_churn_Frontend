@@ -116,7 +116,7 @@ const Visualizations = () => {
 
   const getChartData = async (chartType, column1, column2) => {
     try {
-      const response = await fetch(`http://localhost:4500/data`, {
+      const response = await fetch(`https://customer-churn-ctln.onrender.com`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
