@@ -1,0 +1,64 @@
+/* Visualizations.module.css */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.Visualizations {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Visualizations label {
+  margin-right: 0.5rem;
+}
+
+.Visualizations > * {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #0069d9;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
