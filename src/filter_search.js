@@ -60,7 +60,7 @@ const FilterSearch = () => {
     try {
       // Fetch data from backend API using filter criteria
       const response = await fetch(
-        `http://localhost:4500/api/filter_search`,
+        `https://customer-churn-ctln.onrender.com/api/filter_search`,
         {
           method: 'POST',
           headers: {
