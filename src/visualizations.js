@@ -116,7 +116,7 @@ const Visualizations = () => {
 
   const getChartData = async (chartType, column1, column2) => {
     try {
-      const response = await fetch(`https://customer-churn-ctln.onrender.com`, {
+      const response = await fetch(`http://localhost:4500/data`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -219,38 +219,41 @@ const Visualizations = () => {
 
   return (
     <div className={styles["container"]}>
-      <h2>Visualizations</h2>
-      <form onSubmit={handleSubmit} className={styles["Visualizations"]}>
-        <label htmlFor="chart-type">Chart Type:</label>
+      <h2 className={styles["heading"]}>Visualizations</h2>
+      <form onSubmit={handleSubmit} className={styles["formWrapper"]}>
+        <label htmlFor="chart-type" className={styles["label"]}>Chart Type:</label>
         <Select
           id="chart-type"
           options={chartTypes}
           value={{ value: chartType, label: chartTypes.find(type => type.value === chartType)?.label }}
           onChange={(selectedOption) => setChartType(selectedOption.value)}
+          className={styles["select"]}
         />
         <br />
-        <label htmlFor="column1">Column 1:</label>
+        <label htmlFor="column1" className={styles["label"]}>Column 1:</label>
         <Select
           id="column1"
           options={renderSelectOptions(columns.primary)}
           value={{ value: column1, label: columns.primary.find(column => column.value === column1)?.label }}
           onChange={(selectedOption) => setColumn1(selectedOption.value)}
+          className={styles["select"]}
         />
         <br />
         {columns.secondary && columns.secondary.length > 0 && (
           <>
-            <label htmlFor="column2">Column 2:</label>
+            <label htmlFor="column2" className={styles["label"]}>Column 2:</label>
             <Select
               id="column2"
               options={renderSelectOptions(columns.secondary)}
               value={{ value: column2, label: columns.secondary.find(column => column.value === column2)?.label }}
               onChange={(selectedOption) => setColumn2(selectedOption.value)}
+              className={styles["select"]}
             />
             <br />
           </>
         )}
-        <button type="submit">Generate Chart</button>
-        <button type="button" onClick={handleReset}>Reset</button>
+        <button type="submit" className={styles["button"]}>Generate Chart</button>
+        <button type="button" onClick={handleReset} className={styles["button"]}>Reset</button>
       </form>
       <div className={styles["chart"]}>{renderChart()}</div>
     </div>

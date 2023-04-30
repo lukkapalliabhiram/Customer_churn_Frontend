@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import styles from './FilterSearch.module.css';
+import classNames from 'classnames';
+import Select from 'react-select';
+
+
 
 
 const FilterSearch = () => {
@@ -56,7 +60,7 @@ const FilterSearch = () => {
     try {
       // Fetch data from backend API using filter criteria
       const response = await fetch(
-        `https://customer-churn-ctln.onrender.com`,
+        `http://localhost:4500/api/filter_search`,
         {
           method: 'POST',
           headers: {
@@ -126,41 +130,62 @@ const FilterSearch = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Filter & Search</h2>
-      <form onSubmit={handleSubmit} className={styles.FilterSearch}>
+    <h2 className={styles.title}>Filter & Search</h2>
+    <form onSubmit={handleSubmit} className={styles.FilterSearch}>
+
+      <div>
         <label htmlFor="customerId">Search by Customer ID:</label>
         <input type="text" id="customerId" value={customerId} onChange={handleCustomerIdChange} />
-        <button type="submit">Search</button>
+        <button type="submit" className={classNames(styles.button, styles.searchButton)}>Search</button>
+      </div>
+
         <br />
         <br />
+
+      <div>
         <label htmlFor="gender-filter">Gender:</label>
         <select id="gender-filter" value={genderFilter} onChange={(e) => setGenderFilter(e.target.value)}>
           <option value="">Select gender...</option>
           <option value="0">Female</option>
           <option value="1">Male</option>
         </select>
+        </div>
+
         <br />
+
+        <div>
         <label htmlFor="partner-filter">Partner:</label>
         <select id="partner-filter" value={partnerFilter} onChange={(e) => setPartnerFilter(e.target.value)}>
           <option value="">Select partner status...</option>
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select>
+        </div>
+
         <br />
+
+        <div>
         <label htmlFor="dependents-filter">Dependents:</label>
         <select id="dependents-filter" value={dependentsFilter} onChange={(e) => setDependentsFilter(e.target.value)}>
           <option value="">Select dependents status...</option>
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select>
+        </div>
         <br />
+
+        <div>
         <label htmlFor="phone-service-filter">Phone Service:</label>
         <select id="phone-service-filter" value={phoneServiceFilter} onChange={(e) => setPhoneServiceFilter(e.target.value)}>
           <option value="">Select phone service status...</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
         </select>
+        </div>
+
         <br />
+
+        <div>
         <label htmlFor="internet-service-filter">Internet Service:</label>
         <select id="internet-service-filter" value={internetServiceFilter} onChange={(e) => setInternetServiceFilter(e.target.value)}>
           <option value="">Select internet service status...</option>
@@ -168,8 +193,11 @@ const FilterSearch = () => {
           <option value="1">Fiber Optic</option>
           <option value="2">No</option>
         </select>
+        </div>
 
         <br />
+
+        <div>
         <label htmlFor="contract-filter">Contract:</label>
         <select id="contract-filter" value={contractFilter} onChange={(e) => setContractFilter(e.target.value)}>
           <option value="">Select contract type...</option>
@@ -177,17 +205,19 @@ const FilterSearch = () => {
           <option value="1">One year</option>
           <option value="2">Two year</option>
         </select>
+        </div>
+
         <br />
         <button type="submit">Search</button>
       </form>
       <br />
       <br />
-      <h3>Customer List</h3>
+      <h3 className={styles.customerListTitle}>Customer List</h3>
       {isLoading ? (
         <p>Loading customer data...</p>
       ) : (
-        <table className={styles.table}>
-          <thead>
+        <table className={classNames(styles.table, styles.customerTable)}>
+        <thead>
             <tr>
               <th>Customer ID</th>
               <th>Gender</th>

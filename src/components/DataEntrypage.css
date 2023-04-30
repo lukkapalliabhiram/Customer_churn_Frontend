@@ -1,0 +1,130 @@
+.container {
+    background-image: url("../images/b4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    padding: 40px 0;
+  }
+  
+  .form-wrapper {
+    width: 450px;
+    height: 1000px;
+    margin-left: 30rem;
+  }
+  
+  .form {
+    margin-bottom: 40px;
+  }
+  
+  .form-label {
+    padding-right: 40px;
+  }
+  
+  .form-select {
+    margin: 10px;
+    min-width: 80px;
+    height: 30px;
+  }
+  
+  .form-input {
+    margin: 10px;
+  }
+  
+  .submit-button,
+  .clear-button {
+    margin: 10px;
+    background-color: #282c34;
+    height: 50px;
+    width: 80px;
+    color: white;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .action-button {
+    background-color: #172117;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 5px;
+    border: 2px solid white;
+  }
+  
+  .action-button:hover {
+    background-color: #a2aca2;
+  }
+  
+  .form-label {
+    padding-right: 40px;
+  }
+  
+  .form-input {
+    margin: 10px;
+    height: 30px;
+  }
+  
+  .form-select {
+    margin: 10px;
+    min-width: 80px;
+    height: 30px;
+  }
+  
+  .form-submit {
+    margin: 10px;
+    background-color: #282c34;
+    height: 50px;
+    width: 80px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .form-label {
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .form-input {
+    margin: 10px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-select {
+    margin: 10px;
+    min-width: 80px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-submit {
+    margin: 10px;
+    background-color: #282c34;
+    height: 50px;
+    width: 80px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  

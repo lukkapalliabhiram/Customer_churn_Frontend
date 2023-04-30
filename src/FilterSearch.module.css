@@ -1,62 +1,142 @@
-/* FilterSearch.module.css */
 .container {
-    margin: 0 auto;
-    padding: 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.FilterSearch {
   
-  .FilterSearch {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    animation: fadeIn 1s;
+  align-items: center;
+  gap: 10px;
+  max-width: 600px;
+  grid-template-columns: 1fr 1fr; /* Adjusted to 2 columns */
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+.FilterSearch button[type="submit"] {
+  grid-row-start: 9; /* Adjusted to the ninth row */
+  grid-column: 1 / 3; /* Span both columns */
+  height: 40px;
+  font-weight: bold;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
   }
-  
-  .FilterSearch label,
-  .FilterSearch select,
-  .FilterSearch input {
-    font-size: 16px;
+
+.table {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.customerTable tbody tr {
+  animation: fadeIn 0.3s linear;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.customerTable tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  100% {
+    opacity: 1;
   }
-  
-  button:hover {
-    background-color: #2980b9;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    animation: fadeIn 1s;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  th,
-  td {
-    padding: 8px;
-    border: 1px solid #ccc;
+}
+
+.container > * {
+  animation: slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.container > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.container > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.title {
+  color: #4a4a4a;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.searchButton {
+  cursor: pointer;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.searchButton:hover {
+  background-color: #005eaf;
+}
+
+.searchButton:focus {
+  outline: none;
+}
+
+.customerListTitle {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customerTable th,
+.customerTable td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+}
+
+.customerTable th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.customerTable tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.customerTable tbody tr {
+  animation: fadeIn 0.3s linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  th {
-    background-color: #f2f2f2;
+  100% {
+    opacity: 1;
   }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}

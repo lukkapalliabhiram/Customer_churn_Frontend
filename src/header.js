@@ -33,7 +33,7 @@ const Header = () => {
                 Churn It
             </Link>
             <nav style={navLinksStyle}>
-                <Link to="/home" style={navLinkStyle}>
+                <Link to="/" style={navLinkStyle}>
                     Home
                 </Link>
                 <Link to="/filter_search" style={navLinkStyle}>

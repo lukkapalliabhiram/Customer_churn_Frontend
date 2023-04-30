@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <Header />
          <Routes>
-          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/filter_search" element={<FilterSearch />} />
           <Route path="/visualizations" element={<Visualizations />} />
           <Route path = "/data" element = {<DataEntry/>}/>
