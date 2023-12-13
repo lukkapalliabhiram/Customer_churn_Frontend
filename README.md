@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Churn It - Telecom Churn Data Visualization
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Application URL
 
-## Available Scripts
+Churn, It is hosted on [render.com](https://customer-churn-dl7t.onrender.com/), a fully managed cloud platform for hosting databases and web applications. Both the front-end and back-end applications are deployed here.
 
-In the project directory, you can run:
+## Project Summary
 
-### `npm start`
+Churn It is a web application that serves as a tool for exploring and visualizing telecom churn data. It allows users to perform CRUD operations and gain valuable insights. The application uses the 'Telecom Churn dataset' from Kaggle as its data source. Features include record search, addition, updating, deletion, and various data visualizations to provide a graphical understanding of the data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Objectives and Usefulness
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Primary Objectives
 
-### `npm test`
+- Interact with telecom customer data through various functionalities like Search, CRUD operations.
+- Provide features to visualize data and understand the existing dataset.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Additional Features
 
-### `npm run build`
+- Explore churn data with different visualizations (heatmap, line chart, bar charts, etc.) to understand patterns and trends.
+- Modify and filter the dataset for informed decision-making.
+- Collaborate and share insights among stakeholders.
+- Develop focused retention programs using customer demographics and subscription data.
+- Identify enhancements in additional services to increase customer retention.
+- Improve payment methods for easier service continuation.
+- Predict customer churn based on internet service subscriptions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technical Description
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Telco Customer Churn dataset from IBM, available on Kaggle, includes 21 columns and 7,042 records. It features customer demographics, account information, and churn status. Data is normalized into five tables: customer, plan details, payment info, subscription details, churn info.
 
-### `npm run eject`
+### Preprocessing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Data preprocessing was performed using Pandas, with label encoding of categorical variables using sklearn's Label Encoder. The processed data is stored in a new CSV file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tools
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Model**: Developed using Node JS RESTful APIs and ‘pg’ module for Postgres database interaction.
+- **View**: Created using HTML, CSS, JavaScript, React JS.
+- **Controller**: Developed using Node JS's express module for routing requests.
+- **Deployment Platform**: Render.com.
+- **Tools Used**: Visual Studio Code, DBeaver, Postman.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## User Functionalities
 
-## Learn More
+- **Search**: With multiple filters.
+- **Create New Record**: With unique ID for each record.
+- **Search/Update/Delete a Record**: With user confirmation for deletions.
+- **Data Visualization**: Using various interactive graphs, plots, and charts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **Note**: Improvement areas include adding user sign-up features for increased data security and enhancing data exploration for more interactive visualizations.
