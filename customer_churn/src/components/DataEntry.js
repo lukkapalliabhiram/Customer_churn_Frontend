@@ -174,7 +174,7 @@ const DataEntry = () => {
         throw new Error('Failed to fetch customer data');
       });*/
 
-        await api.post(`https://customer-churn-ctln.onrender.com/api/customers/get`, { customerId: customerID })
+        await api.post(`http://localhost:4500/api/customers/get`, { customerId: customerID })
             .then((response) => {
                 const customerData = response;
                 console.log(customerData);
@@ -357,7 +357,7 @@ const DataEntry = () => {
         console.log(data);
 
         api
-            .post('https://customer-churn-ctln.onrender.com/api/create', data)
+            .post('http://localhost:4500/api/create', data)
             .then((response) => {
                 console.log(response);
                 toast.success('Customer added successfull with customerId: ' + response.customerId);
@@ -397,7 +397,7 @@ const DataEntry = () => {
             totalCharges: totalCharges,
             churn: churn,
         }
-        await api.post(`https://customer-churn-ctln.onrender.com/api/customer/update`, data)
+        await api.post(`http://localhost:4500/api/customer/update`, data)
             .then((response) => {
                 console.log(response)
                 toast.success("Customer details updated successfully");
@@ -434,7 +434,7 @@ const DataEntry = () => {
             } catch (error) {
                 console.error('Error deleting customer:', error);
             }*/
-        await api.post(`https://customer-churn-ctln.onrender.com/api/customer/delete`, { customerId: customerID })
+        await api.post(`http://localhost:4500/api/customer/delete`, { customerId: customerID })
             .then((response) => {
                 toast.success('Customer details deleted successfully for: ' + customerID);
             })
