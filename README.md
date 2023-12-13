@@ -2,7 +2,7 @@
 
 ## Application URL
 
-Churn, It is hosted on [render.com](https://customer-churn-dl7t.onrender.com/), a fully managed cloud platform for hosting databases and web applications. Both the front-end and back-end applications are deployed here.
+Churn, It is hosted on https://customer-churn-dl7t.onrender.com/, a fully managed cloud platform for hosting databases and web applications. Both the front-end and back-end applications are deployed here.
 
 ## Project Summary
 
